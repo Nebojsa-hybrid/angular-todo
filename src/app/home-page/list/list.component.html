@@ -1,0 +1,15 @@
+<div class="relative flex flex-grow">
+	<app-scroll>
+		<app-new-item
+			[forEdit]="forEdit"
+			(addItem)="addNew($event)"
+			(editItem)="editItem($event)"
+		></app-new-item>
+		<app-single-item
+			*ngFor="let item of collection"
+			[data]="item"
+			(delete)="deleteItem(item.id)"
+			(edit)="editItemForm(item)"
+		></app-single-item>
+	</app-scroll>
+</div>

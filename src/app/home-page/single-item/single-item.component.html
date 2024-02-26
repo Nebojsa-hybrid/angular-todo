@@ -1,0 +1,14 @@
+<app-card>
+    <span class="text-green-300 text-2xl py-2">{{data.title}}</span>
+    <span class="text-green-300">{{data.comment}}</span>
+    <div class="flex justify-end">
+        <span 
+            class="button bg-lightBlue cursor-pointer"
+            (click)="onEditClick()"
+        >Edit</span>
+        <span 
+            class="button bg-darkRed ml-3 cursor-pointer"
+            (click)="onDeleteClick()"
+        >Delete</span>
+    </div>
+</app-card>
